@@ -1,0 +1,4 @@
+USE mysql;
+DROP USER IF EXISTS 'userJDPDWESProyectoTema4'@'%';
+DROP DATABASE IF EXISTS DBJDPDWESProyectoTema4;
+
