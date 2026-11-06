@@ -11,7 +11,7 @@
                 background-color: white;
             }
         </style>
-        
+
 
 
     </head>
@@ -23,29 +23,40 @@
 
         <main>
             <?php
-            
-            echo '<h3> Mostrar Variables superglobales con foreach y printr</h3>';
-            
-            echo '<h3>$_SESSION</h3><pre>';
-            print_r($_SESSION);
-            echo "</pre><hr>";
-            echo '<h3>$_COOKIE</h3><pre>';
-            print_r($_COOKIE);
-            echo "</pre><hr>";
-            echo '<h3>$_SERVER</h3><pre>';
-            print_r($_SERVER);
-            echo "</pre><hr>";
-                
-            foreach ($GLOBALS as $nombre => $contenido) {
-                if ($nombre!='_COOKIE' && $nombre!='_SERVER'){
-                    echo "<h3>$ $nombre</h3><pre>";
-                    print_r($contenido);
-                    echo "</pre><hr>";
+            echo '<h3> Mostrar Variables superglobales</h3>';
+
+            $aSuperglobales = [
+                '$_SESSION' => $_SESSION,
+                '$_COOKIE' => $_COOKIE,
+                '$_SERVER' => $_SERVER,
+                '$_REQUEST' => $_REQUEST,
+                '$_GET' => $_GET,
+                '$_POST' => $_POST,
+                '$_FILES' => $_FILES,
+                '$_ENV' => $_ENV
+            ];
+
+            // Recorrido del array
+            foreach ($aSuperglobales as $nombreSuperglobal => $arraySuperglobal) {
+                echo "<h3>$nombreSuperglobal</h3>";
+
+                if (!empty($arraySuperglobal)) {
+                    echo "<ul>";
+
+                    foreach ($arraySuperglobal as $nombre => $contenido) {
+                        if (is_array($contenido)) {
+                            $contenido = "<pre>" . print_r($contenido, true) . "</pre>";
+                        }
+                        echo "<li><strong>$nombre : </strong>" . htmlspecialchars($contenido). "</li>";
+
+                    }
+                    echo "</ul>";
+                } else {
+                    echo "<div class='vacio'>La variable $nombreSuperglobal esta vacia en este momento.</div>";
                 }
-            } 
-            
+            }
+
             phpinfo();
-            
             ?>
         </main>
 

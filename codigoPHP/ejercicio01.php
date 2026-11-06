@@ -23,33 +23,20 @@
 
         <main>
             <?php
-            if (!isset($_SERVER['PHP_AUTH_USER'])) {
+            define('USUARIO', 'admin');
+            define('CONTRASENIA', 'paso');
+
+            if (!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_USER'] != USUARIO || $_SERVER['PHP_AUTH_PW'] != CONTRASENIA) {
                 header('WWW-Authenticate: Basic Realm="Contenido restringido"');
                 header('HTTP/1.0 401 Unauthorized');
                 echo "Usuario no reconocido!";
+                exit;
+            }else{
+                echo 'Accesso Permitido <br />';
+                echo "Nombre de usuario: " . $_SERVER['PHP_AUTH_USER'] . "<br />";
+                echo "Contraseña: " . $_SERVER['PHP_AUTH_PW'] . "<br />";    
             }
-            echo "Nombre de usuario: " . $_SERVER['PHP_AUTH_USER'] . "<br />";
-            echo "Contraseña: " . $_SERVER['PHP_AUTH_PW'] . "<br />";
-            echo "Método de autentificación: " . $_SERVER['AUTH_TYPE'] . "<br />";
-            
-            
-            
-            
-//            $_SERVER['PHP_AUTH_USER'] = 'usuario';
-//            $_SERVER['PHP_AUTH_PW'] = 'paso';
-//            
-//            if (!isset($_SERVER['PHP_AUTH_USER']) || ($_SERVER['PHP_AUTH_USER']!='usuasio' || $_SERVER['PHP_AUTH_PW'] = 'paso')) {
-//                header('WWW-Authenticate: Basic Realm="Contenido restringido"');
-//                header('HTTP/1.0 401 Unauthorized');
-//                echo "Usuario no reconocido!";
-//            }
-//            exit;
-            
             ?>
-            
-            
-
-
         </main>
 
         <footer>
