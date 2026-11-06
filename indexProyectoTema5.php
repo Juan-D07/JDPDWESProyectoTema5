@@ -110,7 +110,7 @@
                             </a>
                         </td>
                         <td>
-                            <a href="mostrarcodigo/mostrarEjercicio01PDO.php" >
+                            <a href="mostrarcodigo/mostrarDetalle.php" >
                                 <div class="mostrar-img"><img src="webroot/images/eye-3-32.png" alt="alt"/></div>
                             </a>
                         </td>
@@ -123,10 +123,14 @@
                              Conexión a la base de datos con la cuenta usuario y tratamiento de errores.
                         </td>
                         <td>
-                            
+                            <a href="codigoPHP/ejercicio01.php" >
+                                <div class="ejecutar-img"><img src="webroot/images/play-32.png" alt="alt"/></div>
+                            </a>
                         </td>
                         <td>
-                            
+                            <a href="mostrarcodigo/mostrarEjercicio01.php" >
+                                <div class="mostrar-img"><img src="webroot/images/eye-3-32.png" alt="alt"/></div>
+                            </a>
                         </td>
                     </tr>
                     <tr>

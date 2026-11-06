@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Tema 3 · Juan Miguel Dominguez </title>
+        <title> Tema 5 · Juan Miguel Dominguez </title>
         <link rel="stylesheet" href="../webroot/css/ejercicios.css">
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-            *{font-family: Oswlad}
+
+            body{
+                background-color: white;
+            }
         </style>
         
 
@@ -35,7 +37,7 @@
             echo "</pre><hr>";
                 
             foreach ($GLOBALS as $nombre => $contenido) {
-                if ($nombre!="$_COOKIE"&&$nombre!="$_SERVER"){
+                if ($nombre!='_COOKIE' && $nombre!='_SERVER'){
                     echo "<h3>$ $nombre</h3><pre>";
                     print_r($contenido);
                     echo "</pre><hr>";
@@ -51,8 +53,8 @@
             <address>
                 <p class="foo-txt">
                     © 2026 <span ><a class="miweb-link" href="../../JDPDWESProyectoDWES/indexProyectoDWES.php" >Juan Miguel Dominguez</a></span> Todos los derechos reservados.
-                    <a href="https://github.com/Juan-D07/JDPDWESProyectoTema3" target="_blank"> <img class="github" src="../webroot/images/github.png"  alt="Github logo"/></a>
-                    <a href="../indexProyectoTema3.php"> <img class="casa" src="../webroot/images/casa.png"  alt="Casa logo"/></a>
+                    <a href="https://github.com/Juan-D07/JDPDWESProyectoTema5" target="_blank"> <img class="github" src="../webroot/images/github.png"  alt="Github logo"/></a>
+                    <a href="../indexProyectoTema5.php"> <img class="casa" src="../webroot/images/casa.png"  alt="Casa logo"/></a>
                 </p>
             </address>
         </footer>
