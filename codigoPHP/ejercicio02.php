@@ -44,6 +44,11 @@
                         ':codUsuario' => $_SERVER['PHP_AUTH_USER'],
                         ':password' => $_SERVER['PHP_AUTH_USER'].$_SERVER['PHP_AUTH_PW']
                     ]);
+                    
+                    if($selectUsuarioContrasena->rowCount()!=1){
+                        $inicioSesionOK = false; 
+                    }
+                    
                 } catch (PDOException $miExceptionPDO) {
 
 
