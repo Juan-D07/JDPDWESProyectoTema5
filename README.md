@@ -26,6 +26,7 @@ Abrir un navegador web.
 Inicia sesion.
 ## 5. Estructura del proyecto
 
+```text
 JDPDWESProyectoTema5/
 ├── indexProyectoTema5.php
 ├── .htaccess
@@ -36,6 +37,7 @@ JDPDWESProyectoTema5/
 ├── webroot
 ├── error
 └── core
+```
 
 ## 6. Funcionalidades
 - Utilizar header('WWW-Authenticate:...`) para el control de accesso
