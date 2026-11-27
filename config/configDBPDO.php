@@ -14,5 +14,8 @@ define('DSN', "mysql:host=10.199.11.252;dbname=DBJDPDWESProyectoTema5;");
 define('USER', "userJDPDWESProyectoTema5");
 define('PASS', "paso");
 
-
+//Configuracion de Explotacion
+//define('DSN', "mysql:host=localhost;dbname=DBJDPDWESProyectoTema5;charset=utf8mb4");
+//define('USER', "userJDPDWESProyectoTema5");
+//define('PASS', "paso1234@@@");
 ?>
